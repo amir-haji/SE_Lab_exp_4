@@ -66,7 +66,9 @@
 
 ![](https://github.com/amir-haji/SE_Lab_exp_4/blob/main/screenshots/image-14.png)
 
-حال scenario outline را اضافه میکنیم:
+بخش دوم)
+
+ scenario outline را اضافه میکنیم:
 
 ![](https://github.com/amir-haji/SE_Lab_exp_4/blob/main/screenshots/image-15.png)
 
@@ -85,4 +87,4 @@
 ![](https://github.com/amir-haji/SE_Lab_exp_4/blob/main/screenshots/image-18.png)
 
 
-بخش دوم)
+بخش سوم)
