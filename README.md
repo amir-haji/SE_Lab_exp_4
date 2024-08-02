@@ -93,6 +93,38 @@
 
 # Profiling
 
+## Part 1
+
+در ابتدا طبق راهنمایی در متن آزمایش، yourkit را نصب می‌کنم و سپس از آن برای پروفایل کردن برنامه javacup استفاده می‌کنم که نتایج آن به در پروفایل به صورت زیر خواهند بود:
+
+![](https://github.com/amir-haji/SE_Lab_exp_4/blob/main/Profiling/ProfilingTest%20part%20screenshots/1.PNG)
+
+و نتایج پروفایل از لحاظ بار بر cpu، مقدار حافظه مصرفی و زمان مصرفی در پروفایل به صورت زیر نمایش داده می‌شوند:
+
+![](https://github.com/amir-haji/SE_Lab_exp_4/blob/main/Profiling/ProfilingTest%20part%20screenshots/2.PNG)
+![](https://github.com/amir-haji/SE_Lab_exp_4/blob/main/Profiling/ProfilingTest%20part%20screenshots/3.PNG)
+![](https://github.com/amir-haji/SE_Lab_exp_4/blob/main/Profiling/ProfilingTest%20part%20screenshots/4.PNG)
+
+که همانطور که از خطای ایجاد‌شده در برنامه و نتایج در پروفایل مشخص است، مشکل از خط ۳۰‌ام در برنامه است که در آنجا سعی می‌کنم مقدار زیادی عدد را به ArrayList اضافه کند که با اضافه‌کردن‌های متعدد و با طولانی شدن لیست، هم حافظه خیلی بالا می‌رود و هم در لیست‌های طولانی زمان بیشتری برای اضافه کردن عنصر جدید مصرف می‌شود.
+
+![](https://github.com/amir-haji/SE_Lab_exp_4/blob/main/Profiling/ProfilingTest%20part%20screenshots/5.PNG)
+
+حال برای رفع این مشکل، تابع temp را با همان منطق به صورتی دیگر با استفاده از آرایه دو بعدی ایجاد می‌کنیم. نکته این است که در این حالت از قبل مقدار حافظه موردنیاز به برنامه تخصیص پیدا می‌کند و دیگر در ادامه برنامه نیاز به تخصیص مقدار حافظه جدید برای مقدار‌های جلوتر نیست.
+
+![](https://github.com/amir-haji/SE_Lab_exp_4/blob/main/Profiling/ProfilingTest%20part%20screenshots/6.PNG)
+
+حال دوباره با جای‌گذاری تابع correct_temp به جای temp در بخش main برنامه، دوباره از ابتدا عمل profiling را انجام می‌دهیم.
+
+![](https://github.com/amir-haji/SE_Lab_exp_4/blob/main/Profiling/ProfilingTest%20part%20screenshots/7.PNG)
+![](https://github.com/amir-haji/SE_Lab_exp_4/blob/main/Profiling/ProfilingTest%20part%20screenshots/8.PNG)
+![](https://github.com/amir-haji/SE_Lab_exp_4/blob/main/Profiling/ProfilingTest%20part%20screenshots/9.PNG)
+![](https://github.com/amir-haji/SE_Lab_exp_4/blob/main/Profiling/ProfilingTest%20part%20screenshots/10.PNG)
+
+حال همانطور که از نتایج بالا مشخص است، در این حالت دیگر برنامه به‌غیر از ابتدای شروع کار آن که نیاز به تخصیص مقداری حافظه دارد، دیگر در ادامه دچار بار زیاد زمان و حافظه مصرفی نخواهد شد و کارکرد آن نسبت به حالت قبلی بهبود می‌یابد.
+
+
+
+
 
 ## Part 2
 در ابتدا یک برنامه که تعداد کلمات را در یک فایل متنی شمارش میکند مینویسیم.
