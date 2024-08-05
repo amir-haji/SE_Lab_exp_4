@@ -11,6 +11,7 @@ public class MyStepdefs {
     private int value1;
     private int value2;
     private int result;
+    private double result2;
 
     private int first;
     private int second;
@@ -38,6 +39,11 @@ public class MyStepdefs {
         value2 = -arg1;
     }
 
+    @When("^I sqrt the two values$")
+    public void iSqrtTheTwoValues() {
+        result = calculator.sqrt(value1, value2);
+    }
+
     @When("^I add the two values$")
     public void iAddTheTwoValues() {
         result = calculator.add(value1, value2);
@@ -48,5 +54,5 @@ public class MyStepdefs {
     public void iExpectTheResult(int arg0) {
         Assert.assertEquals(arg0, result);
     }
-
+    
 }
